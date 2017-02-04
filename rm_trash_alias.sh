@@ -1,7 +1,7 @@
 #!/bin/bash
 #Described: Command rm to trash alias
 #Author: Kim
-#Version: v1.0
+#Version: v1.1
 #Date: 2017.2.1
 #Required: Centos5.0+
 
@@ -27,7 +27,7 @@ mkdir -p "${TRASH_DIR}"
 # remove old alias
 ALIAS_START_LINE=`sed -n '/start rm alias/=' ~/.bashrc`
 ALIAS_END_LINE=`sed -n '/end rm alias/=' ~/.bashrc`
-if [ $ALIAS_START_LINE -gt 0 ] && [ $ALIAS_END_LINE -gt 0 ] && [ $ALIAS_END_LINE -gt $ALIAS_START_LINE ]; then
+if [ $ALIAS_START_LINE ] && [ $ALIAS_END_LINE ] && [ $ALIAS_END_LINE -gt $ALIAS_START_LINE ]; then
     sed -i $ALIAS_START_LINE','$ALIAS_END_LINE'd' ~/.bashrc
 fi
 
@@ -67,7 +67,7 @@ clear_trash()
 ## end rm alias ========================================
 EOF
 
-source ~/.bashrc
+. ~/.bashrc
 echo "Command rm to trash alias done."
 
 # clear trash at 4:00 a.m. every 3 days
