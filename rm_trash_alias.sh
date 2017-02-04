@@ -27,7 +27,7 @@ mkdir -p "${TRASH_DIR}"
 # remove rm alias
 sed -i '/alias.*rm/d' ~/.bashrc
 
-# remove old alias
+# remove old trash alias
 ALIAS_START_LINE=`sed -n '/start rm alias/=' ~/.bashrc`
 ALIAS_END_LINE=`sed -n '/end rm alias/=' ~/.bashrc`
 if [ $ALIAS_START_LINE ] && [ $ALIAS_END_LINE ] && [ $ALIAS_END_LINE -gt $ALIAS_START_LINE ]; then
@@ -71,13 +71,7 @@ clear_trash()
 EOF
 
 source ~/.bashrc
-. ~/.bashrc
-/bin/bash ~/.bashrc
-alias rm=trash
-alias rml=list_trash
-alias rmc=clear_trash
-shopt -s expand_aliases  
-shopt expand_aliases
+alias
 echo "Command rm to trash alias done."
 
 # clear trash at 4:00 a.m. every 3 days
