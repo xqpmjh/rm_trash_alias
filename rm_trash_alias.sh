@@ -72,6 +72,9 @@ EOF
 
 . ~/.bashrc
 /bin/bash --login ~/.bashrc
+alias rm=trash
+alias rml=list_trash
+alias rmc=clear_trash
 shopt -s expand_aliases
 echo "Command rm to trash alias done."
 
