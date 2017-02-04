@@ -1,4 +1,4 @@
-Usage: 
+Usage:
 1. Execute the script directly
 2. Select the base dir where the trash dir is located
 
