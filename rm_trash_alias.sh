@@ -25,7 +25,7 @@ echo "Trash dir : ${TRASH_DIR}"
 mkdir -p "${TRASH_DIR}"
 
 # remove rm alias
-sed -i '/alias(.*)rm/d' ~/.bashrc
+sed -i '/alias.*rm/d' ~/.bashrc
 
 # remove old alias
 ALIAS_START_LINE=`sed -n '/start rm alias/=' ~/.bashrc`
