@@ -7,7 +7,7 @@ Usage:
 Input base dir('/opt' by default): /data  
 Base dir of .trash/ : /data  
 Trash dir : /data/.trash  
-Command rm to trash alias done.</br>
-Trash auto-clean added! You may need to restart crontab!</br>
-Stopping crond:                                            [ OK ]  </br>
-Starting crond:                                            [ OK ]  </br>
+Command rm to trash alias done.  
+Trash auto-clean added! You may need to restart crontab!  
+Stopping crond:                                            [ OK ]  
+Starting crond:                                            [ OK ]  
