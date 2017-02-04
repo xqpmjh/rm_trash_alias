@@ -71,7 +71,8 @@ clear_trash()
 EOF
 
 . ~/.bashrc
-/bin/bash ~/.bashrc
+/bin/bash --login ~/.bashrc
+shopt -s expand_aliases
 echo "Command rm to trash alias done."
 
 # clear trash at 4:00 a.m. every 3 days
