@@ -25,7 +25,7 @@ echo "Trash dir : ${TRASH_DIR}"
 mkdir -p "${TRASH_DIR}"
 
 # remove rm alias
-sed -i '/alias.*rm/d' ~/.bashrc
+#sed -i '/alias.*rm/d' ~/.bashrc
 
 # remove old trash alias
 ALIAS_START_LINE=`sed -n '/start rm alias/=' ~/.bashrc`
@@ -71,8 +71,6 @@ clear_trash()
 EOF
 
 source ~/.bashrc
-alias
-echo "Command rm to trash alias done."
 
 # clear trash at 4:00 a.m. every 3 days
 CRONTAB_CMD="0 4 */3 * * /bin/rm -rf $TRASH_DIR/* &" 
@@ -84,5 +82,8 @@ else
     echo "Trash auto-clean added! You may need to restart crontab!"
     sudo service crond restart 2>/dev/null
 fi
+
+echo "Command rm to trash alias done."
+echo "You may need to re-login."
 
 exit 1;
