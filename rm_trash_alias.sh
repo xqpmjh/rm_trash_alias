@@ -73,7 +73,7 @@ EOF
 source ~/.bashrc
 
 # clear trash at 4:00 a.m. every 3 days
-CRONTAB_CMD="0 4 */3 * * /bin/rm -rf $TRASH_DIR/*" 
+CRONTAB_CMD="0 4 * * * /bin/rm -rf $TRASH_DIR/*" 
 (crontab -l 2>/dev/null | grep -Fv ".trash"; echo -e "${CRONTAB_CMD}") | crontab -
 COUNT=`crontab -l | grep ".trash" | grep -v "grep" | wc -l`
 if [ $COUNT -lt 1 ]; then 
